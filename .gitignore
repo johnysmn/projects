@@ -1,0 +1,13 @@
+# Arquivos/pastas a ignorar
+__pycache__/
+*.pyc
+*.db
+*.sqlite
+*.zip
+*.mp4
+*.jpg
+*.png
+*.iso
+node_modules/
+.DS_Store
+*.tar.gz
