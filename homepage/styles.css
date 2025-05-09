@@ -1,0 +1,28 @@
+header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+body p {
+    color: black;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #BBBBBB;
+}
+
+.image {
+    height: 150px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #000000;
+    background-color: #FBEBCE;
+}
+
+

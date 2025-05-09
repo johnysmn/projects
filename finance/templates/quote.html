@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quote
+{% endblock %}
+
+{% block main %}
+<h2>Search for a Stock’s Symbol</h2>
+<form action="/quote" method="post">
+    <div class="mb-3" style="margin-bottom: 20px;">
+        <input autofocus name="symbol" placeholder="Symbol" type="text">
+    </div>
+        <button class="btn btn-primary" type="submit">Find Quote</button>
+</form>
+{% endblock %}

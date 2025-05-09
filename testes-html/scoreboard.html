@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Scoreboard</title>
+        <style>
+            table {
+                border: 2px solid black;
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            td {
+                border: 2px solid black;
+            }
+
+            .team {
+                background-color: #D8BFD8;
+            }
+
+            #score1 {
+                background-color: #ADD8E6;
+            }
+
+            #score2 {
+                background-color: #FFA07A;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>Example from CS50 Week 8.</header>
+        <h1 style="text-align: center;">Team 1 Vs. Team 2</h1>
+        <p id="feedback" style="text-align: center;"></p>
+        <table>
+            <tr>
+                <td class="team">Team 1</td>
+                <td class="team">Team 2</td>
+            </tr>
+            <tr>
+                <td id="score1">0</td>
+                <td id="score2">0</td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="add1">+1</button>
+                </td>
+                <td>
+                    <button id="add2">+1</button>
+                </td>
+            </tr>
+            <script>
+                let score1 = 0;
+                let score2 = 0;
+                document.querySelector('#add1').onclick = function() {
+                    score1 = score1 + 1;
+                    document.querySelector('#score1').innerHTML = score1;
+                    if (score1 == 5) {
+                        document.querySelector("#feedback").innerHTML = "Team 1 won!";
+                        document.querySelector('#score1').style.backgroundColor = 'Green';
+                        document.querySelector("#score2").style.backgroundColor = "Red";
+                    }
+                }
+                document.querySelector("#add2").onclick = function() {
+                    score2++;
+                    document.querySelector('#score2').innerHTML = score2;
+                    if (score2 == 5) {
+                        document.querySelector("#feedback").innerHTML = "Team 2 won!";
+                        document.querySelector("#score2").style.backgroundColor = "Green";
+                        document.querySelector("#score1").style.backgroundColor = "Red";
+                    }
+                }
+            </script>
+        </table>
+        <footer>Made by Johny</footer>
+    </body>
+
+</html>

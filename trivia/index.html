@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let answer = document.querySelector(".yes");
+                answer.addEventListener("click", function() {
+                    answer.style.backgroundColor = "Green";
+                    document.querySelector("#part1").innerHTML = "Correct!";
+                });
+                let wrong = document.querySelectorAll(".no");
+                for (let i = 0; i < wrong.length; i++) {
+                    wrong[i].addEventListener("click", function() {
+                        wrong[i].style.backgroundColor = "Red";
+                        document.querySelector("#part1").innerHTML = "Incorrect!";
+                    })
+                };
+                document.querySelector("#submit").addEventListener("click", function() {
+                    let name = document.querySelector("#name");
+                    if (name.value == "Brazil") {
+                        name.style.backgroundColor = "Green";
+                        document.querySelector("#part2").innerHTML = "Correct!";
+                    }
+                    else {
+                        name.style.backgroundColor = "Red";
+                        document.querySelector("#part2").innerHTML = "Incorrect!";
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the name of the football player who has 8 Ballons d'Or?</h3>
+                <button class="no">Pelé</button>
+                <button class="yes">Messi</button>
+                <button class="no">Ronaldo</button>
+                <button class="no">Maradona</button>
+                <button class="no">Zidane</button>
+                <p id="part1"></p>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which country won the 2002 football World Cup?</h3>
+                <input type="text" id="name"></input>
+                <button id="submit">Check Answer</button>
+                <p id="part2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>

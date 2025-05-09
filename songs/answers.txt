@@ -1,0 +1,2 @@
+Based on the data from the listener's top 100 most-played songs in 2018, we can characterize their "audio aura" as energetic and lively, since the average energy value is 0.8 and the danceability value is 0.7.
+A better approach could include data from multiple years or even analyze how their musical preferences evolved over time.
